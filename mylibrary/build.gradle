@@ -1,10 +1,14 @@
 apply plugin: 'com.android.library'
-
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.themejunky'
 android {
     compileSdkVersion 27
     flavorDimensions "default"
     buildToolsVersion "27.0.3"
    // publishNonDefault true
+
+  //  defaultPublishConfig "waterDebug"
+
     defaultConfig {
         minSdkVersion 15
         targetSdkVersion 27
@@ -36,6 +40,9 @@ android {
 }
 
 dependencies {
+    implementation 'com.android.support:appcompat-v7:27.1.0'
+    implementation 'com.android.support:cardview-v7:27.1.0'
+    implementation 'com.android.support:design:27.1.0'
 
 
    waterImplementation 'com.squareup.picasso:picasso:2.71828'
