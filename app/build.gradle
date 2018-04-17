@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.personalstyler.client.testarelib"
+        minSdkVersion 15
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+//
+    flavorDimensions "default"
+    productFlavors {
+        water {
+            dimension "default"
+            applicationId "com.personalstyler.client.testarelib.water"
+        }
+
+        blue {
+            dimension "default"
+            applicationId "com.personalstyler.client.testarelib.blue"
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+
+
+    implementation  project(path: ':mylibrary')
+}
