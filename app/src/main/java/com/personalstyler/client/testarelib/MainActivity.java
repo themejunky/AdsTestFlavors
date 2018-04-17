@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       new TestA(this);
+       new TestA(this) ;
       // new TestWater(this);
 
 
