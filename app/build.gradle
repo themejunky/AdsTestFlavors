@@ -27,29 +27,13 @@ android {
 //        }
 //    }
 
-
-    signingConfigs {
-        release {
-            Properties props = new Properties()
-            props.load(new FileInputStream(file("../keystore/lightkeyboard.properties")))
-            storeFile file(props['key.store'])
-            storePassword props['key.store.password']
-            keyAlias props['key.alias']
-            keyPassword props['key.alias.password']
-        }
-    }
-
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        caca {
-            signingConfig signingConfigs.release
-        }
+        debug {
 
-        maca {
-            signingConfig signingConfigs.release
         }
     }
 }

@@ -3,6 +3,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,6 +16,8 @@ public class MainActivity extends AppCompatActivity {
       // new TestWater(this);
 
 
+       // new TestA(this);
+        //new TestWater(this);
 
       // new TestBlue(this);
     }

@@ -3,10 +3,9 @@ apply plugin: 'com.github.dcendents.android-maven'
 group='com.github.themejunky'
 android {
     compileSdkVersion 27
-    flavorDimensions "default"
+   // flavorDimensions "default"
     buildToolsVersion "27.0.3"
-
-   // publishNonDefault true
+    publishNonDefault true
 
   //  defaultPublishConfig "waterDebug"
 
@@ -29,18 +28,14 @@ android {
 //            dimension "default"
 //        }
 //    }
-//
+
 
     buildTypes {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
-        caca {
-
-        }
-
-        maca {
+        debug {
 
         }
     }
@@ -48,12 +43,6 @@ android {
 }
 
 dependencies {
-
-   cacaImplementation 'com.squareup.picasso:picasso:2.71828'
-
-    macaImplementation 'com.github.bumptech.glide:glide:4.7.1'
-
-    //waterImplementation 'com.squareup.picasso:picasso:2.71828'
-
-  // blueImplementation 'com.github.bumptech.glide:glide:4.7.1'
+   debugCompile 'com.squareup.picasso:picasso:2.71828'
+    releaseCompile 'com.github.bumptech.glide:glide:4.7.1'
 }
