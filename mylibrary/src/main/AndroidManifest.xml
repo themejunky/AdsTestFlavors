@@ -1,2 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.personalstyler.client.mylibrary" />
+    package="com.personalstyler.client.mylibrary" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+</manifest>
