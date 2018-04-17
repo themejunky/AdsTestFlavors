@@ -14,16 +14,28 @@ android {
     }
 
 //
-    flavorDimensions "default"
-    productFlavors {
-        water {
-            dimension "default"
-            applicationId "com.personalstyler.client.testarelib.water"
-        }
+//    flavorDimensions "default"
+//    productFlavors {
+//        water {
+//            dimension "default"
+//            applicationId "com.personalstyler.client.testarelib.water"
+//        }
+//
+//        blue {
+//            dimension "default"
+//            applicationId "com.personalstyler.client.testarelib.blue"
+//        }
+//    }
 
-        blue {
-            dimension "default"
-            applicationId "com.personalstyler.client.testarelib.blue"
+
+    signingConfigs {
+        release {
+            Properties props = new Properties()
+            props.load(new FileInputStream(file("../keystore/lightkeyboard.properties")))
+            storeFile file(props['key.store'])
+            storePassword props['key.store.password']
+            keyAlias props['key.alias']
+            keyPassword props['key.alias.password']
         }
     }
 
@@ -31,6 +43,13 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        caca {
+            signingConfig signingConfigs.release
+        }
+
+        maca {
+            signingConfig signingConfigs.release
         }
     }
 }
